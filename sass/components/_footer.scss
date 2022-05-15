@@ -1,0 +1,33 @@
+.footer {
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: 0;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  background-color: var(--footer-bg-color);
+  &__lable,
+  &__link {
+    margin-bottom: 14px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.167;
+
+    color: var(--txt-clor-white);
+  }
+
+  &__link {
+    text-decoration-line: underline;
+  }
+
+  &__copyrite {
+    font-family: var(--secodary-font);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.154;
+
+    color: var(--txt-clor-white);
+  }
+}

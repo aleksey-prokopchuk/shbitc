@@ -1,81 +1,11 @@
 .header {
-  // height: 220px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: var(--accent-color);
-  background-image: url(../images/header/header-bg-sm.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+  padding-top: 170px;
+
   @media screen and(min-width:768px) {
-    // height: 170px;
-    background-image: url(../images/header/header-bg-md.jpg);
+    padding-top: 170px;
   }
+  // // height: 220px;
   @media screen and(min-width:1200px) {
-    background-image: url(../images/header/header-bg-lg.jpg);
-  }
-
-  &__tagline {
-    margin-left: 22px;
-    margin-bottom: 13px;
-    font-family: 'Brygada 1918';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.143;
-    letter-spacing: 0.2em;
-
-    color: var(--accent-color-yellow);
-    @media screen and(min-width:768px) and(max-width:1199.5px) {
-      margin-bottom: 11px;
-    }
-    @media screen and(min-width:1200px) {
-      font-size: 16px;
-      line-height: 1.188;
-    }
-  }
-
-  &__title {
-    margin-bottom: 28px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 1.159;
-    color: var(--txt-clor-white);
-    text-shadow: 0px 0px 8px #104849, 0px 0px 8px #104849, 0px 0px 10px #104849,
-      0px 0px 14px #104849, 0px 0px 4px #104849, 0px 0px 4px #104849;
-    @media screen and(max-width:767.5px) {
-      width: 230px;
-    }
-    @media screen and(min-width:768px) {
-      margin-bottom: 20px;
-    }
-    @media screen and(min-width:1200px) {
-      margin-bottom: 36px;
-
-      font-size: 24px;
-      line-height: 1.167;
-    }
-  }
-  &__txt-less {
-    font-size: 20px;
-    @media screen and(min-width:1200px) {
-      font-size: 22px;
-    }
-  }
-
-  &__description {
-    font-style: italic;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.143;
-    letter-spacing: 0;
-
-    color: var(--accent-color-yellow);
-
-    text-shadow: 0px 0px 8px #104849, 0px 0px 8px #104849, 0px 0px 10px #104849,
-      0px 0px 14px #104849, 0px 0px 4px #104849, 0px 0px 4px #104849;
-    @media screen and(min-width:1200px) {
-      font-size: 16px;
-      line-height: 1.125;
-    }
+    padding-top: 200px;
   }
 }
