@@ -191,7 +191,7 @@ img {
 }
 
 .hero__title {
-  margin-bottom: 28px;
+  margin-bottom: 19px;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -202,7 +202,7 @@ img {
 
 @media screen and (max-width: 767.5px) {
   .hero__title {
-    width: 230px;
+    width: 250px;
   }
 }
 
