@@ -14,6 +14,19 @@ body {
   letter-spacing: 0.04em;
 }
 
+.subtitle {
+  font-family: var(--secodary-font);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.176;
+
+  text-align: center;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+
+  color: var(--subtitle-clor-font);
+}
+
 .container {
   width: 100%;
 

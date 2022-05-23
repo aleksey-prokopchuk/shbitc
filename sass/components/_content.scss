@@ -1,3 +1,62 @@
 .content {
-  height: 30vh;
+  &__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  &__item {
+    width: 569px;
+    height: 291px;
+    border: 1px solid #bababa;
+    border-radius: 4px;
+
+    background-repeat: no-repeat;
+    // background-size: 100%;
+    background-position: center bottom;
+    &:nth-child(1) {
+      background-image: url(../images/content/presentation-lg.jpg);
+    }
+    &:nth-child(2) {
+      background-image: url(../images/content/selling-lg.jpg);
+      background-position: right center;
+    }
+    &:nth-child(3) {
+      background-image: url(../images/content/icon-courses-lg.png),
+        url(../images/content/courses-lg.jpg);
+      background-position: 16px 26px, center bottom;
+    }
+    &:nth-child(4) {
+      background-image: url(../images/content/site-lg.jpg);
+    }
+  }
+
+  &__link {
+    height: 100%;
+    padding: 26px 16px;
+  }
+
+  &__subtitle {
+    margin-bottom: 24px;
+
+    &--selling {
+    }
+  }
+  &__description {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.176;
+    letter-spacing: 0;
+
+    color: var(--main-color-font);
+
+    &--selling {
+      padding-right: 200px;
+    }
+    &--courses {
+      padding-left: 100px;
+    }
+  }
 }

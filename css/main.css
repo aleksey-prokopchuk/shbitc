@@ -2,6 +2,7 @@
   --accent-color: #104849;
   --accent-color-yellow: #fff200;
   --txt-clor-white: #ffffff;
+  --subtitle-clor-font: #bf0202;
   --main-color-font: #000000;
   --footer-bg-color: #092367;
   --main-font: 'Tinos', serif;
@@ -20,6 +21,17 @@ body {
 body {
   font-family: var(--main-font);
   letter-spacing: 0.04em;
+}
+
+.subtitle {
+  font-family: var(--secodary-font);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.176;
+  text-align: center;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: var(--subtitle-clor-font);
 }
 
 .container {
@@ -248,8 +260,64 @@ img {
   }
 }
 
-.content {
-  height: 30vh;
+.content__list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.content__item {
+  width: 569px;
+  height: 291px;
+  border: 1px solid #bababa;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.content__item:nth-child(1) {
+  background-image: url(../images/content/presentation-lg.jpg);
+}
+
+.content__item:nth-child(2) {
+  background-image: url(../images/content/selling-lg.jpg);
+  background-position: right center;
+}
+
+.content__item:nth-child(3) {
+  background-image: url(../images/content/icon-courses-lg.png), url(../images/content/courses-lg.jpg);
+  background-position: 16px 26px, center bottom;
+}
+
+.content__item:nth-child(4) {
+  background-image: url(../images/content/site-lg.jpg);
+}
+
+.content__link {
+  height: 100%;
+  padding: 26px 16px;
+}
+
+.content__subtitle {
+  margin-bottom: 24px;
+}
+
+.content__description {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.176;
+  letter-spacing: 0;
+  color: var(--main-color-font);
+}
+
+.content__description--selling {
+  padding-right: 200px;
+}
+
+.content__description--courses {
+  padding-left: 100px;
 }
 
 .footer {
