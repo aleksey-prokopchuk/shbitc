@@ -275,6 +275,7 @@ img {
   border-radius: 4px;
   background-repeat: no-repeat;
   background-position: center bottom;
+  transition: box-shadow var(--kubik);
 }
 
 .content__item:nth-child(1) {
@@ -293,6 +294,10 @@ img {
 
 .content__item:nth-child(4) {
   background-image: url(../images/content/site-lg.jpg);
+}
+
+.content__item:hover, .content__item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .content__link {
