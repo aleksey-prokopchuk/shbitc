@@ -1,14 +1,14 @@
 .hero {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
+  // position: absolute;
+  // left: 0;
+  // right: 0;
+  // top: 0;
   // height: 220px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 18px;
+  padding-bottom: 19px;
   background-color: var(--accent-color);
   background-image: url(../images/header/header-bg-sm.jpg);
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   @media screen and(min-width:768px) {
     // height: 170px;
@@ -16,6 +16,23 @@
   }
   @media screen and(min-width:1200px) {
     background-image: url(../images/header/header-bg-lg.jpg);
+  }
+
+  &__container {
+    @media screen and(min-width:1200px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__wrapper-left {
+    @media screen and(max-width:768.5px) {
+      margin-bottom: 19px;
+    }
+    @media screen and(min-width:768px) and(max-width:1199.5px) {
+      margin-bottom: 14px;
+    }
   }
 
   &__tagline {
@@ -38,7 +55,7 @@
   }
 
   &__title {
-    margin-bottom: 19px;
+    // margin-bottom: 19px;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -50,7 +67,7 @@
       width: 250px;
     }
     @media screen and(min-width:768px) {
-      margin-bottom: 14px;
+      // margin-bottom: 14px;
     }
     @media screen and(min-width:1200px) {
       //   margin-bottom: 36px;

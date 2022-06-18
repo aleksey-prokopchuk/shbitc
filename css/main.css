@@ -4,6 +4,8 @@
   --txt-clor-white: #ffffff;
   --subtitle-clor-font: #bf0202;
   --main-color-font: #000000;
+  --border-clor: #bababa;
+  --number-clor: #00000026;
   --footer-bg-color: #092367;
   --main-font: 'Tinos', serif;
   --secodary-font: 'Brygada 1918', serif;
@@ -28,10 +30,24 @@ body {
   font-weight: 400;
   font-size: 17px;
   line-height: 1.176;
+  letter-spacing: 0.1em;
   text-align: center;
-  text-decoration-line: underline;
   text-transform: uppercase;
   color: var(--subtitle-clor-font);
+}
+
+@media screen and (min-width: 768px) {
+  .subtitle {
+    font-size: 16px;
+    line-height: 1.125;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subtitle {
+    font-size: 18px;
+    line-height: 1.167;
+  }
 }
 
 .container {
@@ -95,8 +111,8 @@ img {
 .main-nav__link {
   position: relative;
   display: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.143;
@@ -137,32 +153,12 @@ img {
   transform: scaleX(100%);
 }
 
-.header {
-  padding-top: 170px;
-}
-
-@media screen and (min-width: 768px) {
-  .header {
-    padding-top: 170px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header {
-    padding-top: 200px;
-  }
-}
-
 .hero {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 18px;
+  padding-bottom: 19px;
   background-color: var(--accent-color);
   background-image: url(../images/header/header-bg-sm.jpg);
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
 }
 
@@ -175,6 +171,26 @@ img {
 @media screen and (min-width: 1200px) {
   .hero {
     background-image: url(../images/header/header-bg-lg.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768.5px) {
+  .hero__wrapper-left {
+    margin-bottom: 19px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.5px) {
+  .hero__wrapper-left {
+    margin-bottom: 14px;
   }
 }
 
@@ -203,7 +219,6 @@ img {
 }
 
 .hero__title {
-  margin-bottom: 19px;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -215,12 +230,6 @@ img {
 @media screen and (max-width: 767.5px) {
   .hero__title {
     width: 250px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .hero__title {
-    margin-bottom: 14px;
   }
 }
 
@@ -269,31 +278,112 @@ img {
 }
 
 .content__item {
-  width: 569px;
-  height: 291px;
-  border: 1px solid #bababa;
+  width: 388px;
+  height: 232px;
+  border: 1px solid var(--border-clor);
   border-radius: 4px;
   background-repeat: no-repeat;
   background-position: center bottom;
+  background-size: contain;
   transition: box-shadow var(--kubik);
 }
 
-.content__item:nth-child(1) {
-  background-image: url(../images/content/presentation-lg.jpg);
+@media screen and (min-width: 768px) {
+  .content__item {
+    width: 353px;
+    height: 230px;
+  }
 }
 
-.content__item:nth-child(2) {
-  background-image: url(../images/content/selling-lg.jpg);
-  background-position: right center;
+@media screen and (min-width: 1200px) {
+  .content__item {
+    width: 569px;
+    height: 291px;
+  }
 }
 
-.content__item:nth-child(3) {
-  background-image: url(../images/content/icon-courses-lg.png), url(../images/content/courses-lg.jpg);
-  background-position: 16px 26px, center bottom;
+@media screen and (min-width: 420px) {
+  .content__item:nth-child(1) {
+    background-image: url(../images/content/presentation-sm.jpg);
+    background-image: -webkit-image-set(url(../images/content/presentation-sm.webp) 1x);
+  }
 }
 
-.content__item:nth-child(4) {
-  background-image: url(../images/content/site-lg.jpg);
+@media screen and (min-width: 420px) and (min-device-pixel-ratio: 2), screen and (min-width: 420px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 420px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 420px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 420px) and (min-resolution: 192dpi), screen and (min-width: 420px) and (min-resolution: 2dppx) {
+  .content__item:nth-child(1) {
+    background-image: url(../images/content/presentation-sm@2x.jpg);
+    background-image: -webkit-image-set(url(../images/content/presentation-sm@2x.webp) 2x);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content__item:nth-child(1) {
+    background-image: url(../images/content/presentation-md.jpg);
+    background-image: -webkit-image-set(url(../images/content/presentation-md.webp) 1x);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .content__item:nth-child(1) {
+    background-image: url(../images/content/presentation-md@2x.jpg);
+    background-image: -webkit-image-set(url(../images/content/presentation-md@2x.webp) 2x);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content__item:nth-child(1) {
+    background-image: url(../images/content/presentation-lg.jpg);
+    background-image: -webkit-image-set(url(../images/content/presentation-lg.webp) 1x);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .content__item:nth-child(1) {
+    background-image: url(../images/content/presentation-lg@2x.jpg);
+    background-image: -webkit-image-set(url(../images/content/presentation-lg@2x.webp) 2x);
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .content__item:nth-child(2) {
+    background-image: url(../images/content/selling-sm.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content__item:nth-child(2) {
+    background-image: url(../images/content/selling-md.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content__item:nth-child(2) {
+    background-image: url(../images/content/selling-lg.jpg);
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .content__item:nth-child(3) {
+    background-image: url(../images/content/icon-courses-sm.png), url(../images/content/courses-sm.jpg);
+    background-position: 16px 48px, center bottom;
+    background-size: auto, contain;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content__item:nth-child(3) {
+    background-image: url(../images/content/icon-courses-md.png), url(../images/content/courses-md.jpg);
+    background-position: 16px 48px, center bottom;
+    background-size: auto, contain;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content__item:nth-child(3) {
+    background-image: url(../images/content/icon-courses-lg.png), url(../images/content/courses-lg.jpg);
+    background-position: 16px 26px, center bottom;
+    background-size: auto, contain;
+  }
 }
 
 .content__item:hover, .content__item:focus {
@@ -301,12 +391,31 @@ img {
 }
 
 .content__link {
+  position: relative;
   height: 100%;
-  padding: 26px 16px;
+  padding: 20px 16px;
+}
+
+@media screen and (min-width: 1200px) {
+  .content__link {
+    padding-top: 26px;
+  }
 }
 
 .content__subtitle {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .content__subtitle {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content__subtitle {
+    margin-bottom: 13px;
+  }
 }
 
 .content__description {
@@ -317,12 +426,38 @@ img {
   color: var(--main-color-font);
 }
 
-.content__description--selling {
-  padding-right: 200px;
+@media screen and (min-width: 768px) {
+  .content__description {
+    font-size: 16px;
+    line-height: 1.125;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content__description {
+    font-size: 18px;
+    line-height: 1.167;
+  }
 }
 
 .content__description--courses {
-  padding-left: 100px;
+  padding-left: 84px;
+}
+
+@media screen and (min-width: 1200px) {
+  .content__description--courses {
+    padding-left: 100px;
+  }
+}
+
+.content__number {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  color: var(--number-clor);
 }
 
 .footer {
